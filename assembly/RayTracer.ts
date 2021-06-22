@@ -27,7 +27,7 @@ export class RayTracer {
   }
   public addToScene(figures: Sphere[]): void {
     for (let i = 0, len = figures.length; i < len; ++i) {
-      this.figures.push(figures[i]);
+      this.figures.push(unchecked(figures[i]));
     }
   }
   private trace(rayorig: Vec3, raydir: Vec3, depth: i32): Vec3 {
@@ -36,7 +36,7 @@ export class RayTracer {
     const params = new IntersectParams();
     const figures = this.figures;
     for (let i = 0, len = figures.length; i < len; ++i) {
-      const fig = figures[i];
+      const fig = unchecked(figures[i]);
       if (fig.intersect(rayorig, raydir, params)) {
         if (params.t < tnear) {
           tnear = params.t;
@@ -51,6 +51,7 @@ export class RayTracer {
     let nhit = phit.opMinus(figure.getCenter()).normalize();
 
     let inside = false;
+    // let rayhitRadio = raydir.dot(nhit);
     if (raydir.dot(nhit) > 0) {
       nhit = nhit.opInv();
       inside = true;

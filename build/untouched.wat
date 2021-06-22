@@ -39,10 +39,10 @@
  (global $~lib/ASC_LOW_MEMORY_LIMIT i32 (i32.const 0))
  (global $~lib/builtins/i32.MAX_VALUE i32 (i32.const 2147483647))
  (global $~lib/builtins/f64.MAX_VALUE f64 (f64.const 1797693134862315708145274e284))
- (global $~lib/rt/__rtti_base i32 (i32.const 1056))
- (global $~lib/memory/__data_end i32 (i32.const 1140))
- (global $~lib/memory/__stack_pointer (mut i32) (i32.const 17524))
- (global $~lib/memory/__heap_base i32 (i32.const 17524))
+ (global $~lib/rt/__rtti_base i32 (i32.const 880))
+ (global $~lib/memory/__data_end i32 (i32.const 964))
+ (global $~lib/memory/__stack_pointer (mut i32) (i32.const 17348))
+ (global $~lib/memory/__heap_base i32 (i32.const 17348))
  (memory $0 1)
  (data (i32.const 8) "n\83\f9\a2\00\00\00\00\d1W\'\fc)\15DN\99\95b\db\c0\dd4\f5\abcQ\feA\90C<:n$\b7a\c5\bb\de\ea.I\06\e0\d2MB\1c\eb\1d\fe\1c\92\d1\t\f55\82\e8>\a7)\b1&p\9c\e9\84D\bb.9\d6\919A~_\b4\8b_\84\9c\f49S\83\ff\97\f8\1f;(\f9\bd\8b\11/\ef\0f\98\05\de\cf~6m\1fm\nZf?FO\b7\t\cb\'\c7\ba\'u-\ea_\9e\f79\07={\f1\e5\eb\b1_\fbk\ea\92R\8aF0\03V\08]\8d\1f \bc\cf\f0\abk{\fca\91\e3\a9\1d6\f4\9a_\85\99e\08\1b\e6^\80\d8\ff\8d@h\a0\14W\15\06\061\'sM")
  (data (i32.const 204) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00A\00l\00l\00o\00c\00a\00t\00i\00o\00n\00 \00t\00o\00o\00 \00l\00a\00r\00g\00e\00\00\00\00\00")
@@ -56,11 +56,9 @@
  (data (i32.const 604) "\1c\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 636) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1c\00\00\00I\00n\00v\00a\00l\00i\00d\00 \00l\00e\00n\00g\00t\00h\00")
  (data (i32.const 684) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00a\00r\00r\00a\00y\00b\00u\00f\00f\00e\00r\00.\00t\00s\00\00\00\00\00\00\00")
- (data (i32.const 748) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1a\00\00\00~\00l\00i\00b\00/\00a\00r\00r\00a\00y\00.\00t\00s\00\00\00")
- (data (i32.const 796) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00^\00\00\00E\00l\00e\00m\00e\00n\00t\00 \00t\00y\00p\00e\00 \00m\00u\00s\00t\00 \00b\00e\00 \00n\00u\00l\00l\00a\00b\00l\00e\00 \00i\00f\00 \00a\00r\00r\00a\00y\00 \00i\00s\00 \00h\00o\00l\00e\00y\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 924) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00O\00b\00j\00e\00c\00t\00 \00a\00l\00r\00e\00a\00d\00y\00 \00p\00i\00n\00n\00e\00d\00\00\00")
- (data (i32.const 988) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00O\00b\00j\00e\00c\00t\00 \00i\00s\00 \00n\00o\00t\00 \00p\00i\00n\00n\00e\00d\00\00\00\00\00")
- (data (i32.const 1056) "\n\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00A\00\00\00\02\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\02\t\00\00\00\00\00\00 \00\00\00\00\00\00\00")
+ (data (i32.const 748) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00O\00b\00j\00e\00c\00t\00 \00a\00l\00r\00e\00a\00d\00y\00 \00p\00i\00n\00n\00e\00d\00\00\00")
+ (data (i32.const 812) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00O\00b\00j\00e\00c\00t\00 \00i\00s\00 \00n\00o\00t\00 \00p\00i\00n\00n\00e\00d\00\00\00\00\00")
+ (data (i32.const 880) "\n\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00A\00\00\00\02\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\02\t\00\00\00\00\00\00 \00\00\00\00\00\00\00")
  (table $0 1 funcref)
  (elem $0 (i32.const 1))
  (export "scene" (func $assembly/index/scene))
@@ -4948,49 +4946,52 @@
       local.set $25
       local.get $25
       f64.load
-      local.get $25
-      f64.load
-      f64.mul
-      local.get $25
-      f64.load offset=8
-      local.get $25
-      f64.load offset=8
-      f64.mul
-      f64.add
-      local.get $25
-      f64.load offset=16
-      local.get $25
-      f64.load offset=16
-      f64.mul
-      f64.add
       local.set $23
+      local.get $25
+      f64.load offset=8
+      local.set $22
+      local.get $25
+      f64.load offset=16
+      local.set $21
       local.get $23
+      local.get $23
+      f64.mul
+      local.get $22
+      local.get $22
+      f64.mul
+      f64.add
+      local.get $21
+      local.get $21
+      f64.mul
+      f64.add
+      local.set $21
+      local.get $21
       f64.const 0
       f64.gt
       if
        f64.const 1
-       local.get $23
-       local.set $21
        local.get $21
+       local.set $23
+       local.get $23
        f64.sqrt
        f64.div
-       local.set $21
+       local.set $23
        local.get $24
        local.get $24
        f64.load
-       local.get $21
+       local.get $23
        f64.mul
        call $assembly/types/Vec3/Vec3#set:x
        local.get $24
        local.get $24
        f64.load offset=8
-       local.get $21
+       local.get $23
        f64.mul
        call $assembly/types/Vec3/Vec3#set:y
        local.get $24
        local.get $24
        f64.load offset=16
-       local.get $21
+       local.get $23
        f64.mul
        call $assembly/types/Vec3/Vec3#set:z
       end
@@ -5006,25 +5007,13 @@
       i32.store offset=8
       local.get $24
       f64.load
-      local.set $23
+      local.set $21
       local.get $24
       f64.load offset=8
-      local.set $21
+      local.set $23
       local.get $24
       f64.load offset=16
       local.set $22
-      local.get $23
-      f64.const 1
-      f64.ge
-      if (result f64)
-       f64.const 255
-      else
-       local.get $23
-       f64.const 255
-       f64.mul
-      end
-      i32.trunc_f64_u
-      local.set $25
       local.get $21
       f64.const 1
       f64.ge
@@ -5032,6 +5021,18 @@
        f64.const 255
       else
        local.get $21
+       f64.const 255
+       f64.mul
+      end
+      i32.trunc_f64_u
+      local.set $25
+      local.get $23
+      f64.const 1
+      f64.ge
+      if (result f64)
+       f64.const 255
+      else
+       local.get $23
        f64.const 255
        f64.mul
       end
@@ -5102,7 +5103,7 @@
    i32.const 3
    i32.eq
    if
-    i32.const 944
+    i32.const 768
     i32.const 288
     i32.const 337
     i32.const 7
@@ -5134,7 +5135,7 @@
   i32.const 3
   i32.ne
   if
-   i32.const 1008
+   i32.const 832
    i32.const 288
    i32.const 351
    i32.const 5
@@ -5219,16 +5220,13 @@
   i32.const 656
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 816
-  local.get $0
-  call $~lib/rt/itcms/__visit
   i32.const 224
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 944
+  i32.const 768
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 1008
+  i32.const 832
   local.get $0
   call $~lib/rt/itcms/__visit
  )
@@ -5440,8 +5438,8 @@
   global.get $~lib/memory/__data_end
   i32.lt_s
   if
-   i32.const 17552
-   i32.const 17600
+   i32.const 17376
+   i32.const 17424
    i32.const 1
    i32.const 1
    call $~lib/builtins/abort
@@ -5472,7 +5470,7 @@
   (local $24 f64)
   (local $25 f64)
   (local $26 f64)
-  (local $27 i32)
+  (local $27 f64)
   (local $28 i32)
   (local $29 i32)
   (local $30 i32)
@@ -5484,6 +5482,7 @@
   (local $36 i32)
   (local $37 i32)
   (local $38 i32)
+  (local $39 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 84
   i32.sub
@@ -5551,7 +5550,7 @@
     global.get $~lib/memory/__stack_pointer
     local.get $7
     local.get $8
-    call $~lib/array/Array<assembly/types/Sphere/Sphere>#__get
+    call $~lib/array/Array<assembly/types/Sphere/Sphere>#__uget
     local.tee $11
     i32.store offset=8
     block $assembly/types/Sphere/Sphere#intersect|inlined.0 (result i32)
@@ -5620,41 +5619,42 @@
       br $assembly/types/Sphere/Sphere#intersect|inlined.0
      end
      local.get $17
-     local.set $18
-     local.get $17
      local.set $16
-     local.get $18
-     f64.load
      local.get $16
      f64.load
+     local.set $20
+     local.get $16
+     f64.load offset=8
+     local.set $21
+     local.get $16
+     f64.load offset=16
+     local.set $22
+     local.get $20
+     local.get $20
      f64.mul
-     local.get $18
-     f64.load offset=8
-     local.get $16
-     f64.load offset=8
+     local.get $21
+     local.get $21
      f64.mul
      f64.add
-     local.get $18
-     f64.load offset=16
-     local.get $16
-     f64.load offset=16
+     local.get $22
+     local.get $22
      f64.mul
      f64.add
      local.get $19
      local.get $19
      f64.mul
      f64.sub
-     local.set $20
+     local.set $22
      local.get $15
-     local.set $16
-     local.get $16
+     local.set $18
+     local.get $18
      f64.load offset=8
      local.set $21
      local.get $21
      local.get $21
      f64.mul
      local.set $21
-     local.get $20
+     local.get $22
      local.get $21
      f64.gt
      if
@@ -5664,18 +5664,18 @@
      local.get $12
      if
       local.get $21
-      local.get $20
+      local.get $22
       f64.sub
-      local.set $22
-      local.get $22
+      local.set $20
+      local.get $20
       f64.sqrt
-      local.set $22
+      local.set $20
       local.get $19
-      local.get $22
+      local.get $20
       f64.sub
       local.set $23
       local.get $19
-      local.get $22
+      local.get $20
       f64.add
       local.set $24
       local.get $12
@@ -5716,12 +5716,12 @@
   if
    local.get $0
    i32.load offset=4
-   local.set $38
+   local.set $39
    global.get $~lib/memory/__stack_pointer
    i32.const 84
    i32.add
    global.set $~lib/memory/__stack_pointer
-   local.get $38
+   local.get $39
    return
   end
   global.get $~lib/memory/__stack_pointer
@@ -5737,39 +5737,39 @@
   local.set $12
   global.get $~lib/memory/__stack_pointer
   local.get $2
-  local.set $18
+  local.set $16
   local.get $4
-  local.set $22
+  local.set $20
   i32.const 0
-  local.get $18
+  local.get $16
   f64.load
-  local.get $22
+  local.get $20
   f64.mul
-  local.get $18
+  local.get $16
   f64.load offset=8
-  local.get $22
+  local.get $20
   f64.mul
-  local.get $18
+  local.get $16
   f64.load offset=16
-  local.get $22
+  local.get $20
   f64.mul
   call $assembly/types/Vec3/Vec3#constructor
-  local.tee $16
+  local.tee $18
   i32.store offset=20
   i32.const 0
   local.get $12
   f64.load
-  local.get $16
+  local.get $18
   f64.load
   f64.add
   local.get $12
   f64.load offset=8
-  local.get $16
+  local.get $18
   f64.load offset=8
   f64.add
   local.get $12
   f64.load offset=16
-  local.get $16
+  local.get $18
   f64.load offset=16
   f64.add
   call $assembly/types/Vec3/Vec3#constructor
@@ -5809,19 +5809,22 @@
   local.set $11
   local.get $11
   f64.load
+  local.set $20
   local.get $11
-  f64.load
+  f64.load offset=8
+  local.set $21
+  local.get $11
+  f64.load offset=16
+  local.set $22
+  local.get $20
+  local.get $20
   f64.mul
-  local.get $11
-  f64.load offset=8
-  local.get $11
-  f64.load offset=8
+  local.get $21
+  local.get $21
   f64.mul
   f64.add
-  local.get $11
-  f64.load offset=16
-  local.get $11
-  f64.load offset=16
+  local.get $22
+  local.get $22
   f64.mul
   f64.add
   local.set $22
@@ -5886,15 +5889,15 @@
   if
    global.get $~lib/memory/__stack_pointer
    local.get $17
-   local.set $18
+   local.set $16
    i32.const 0
-   local.get $18
+   local.get $16
    f64.load
    f64.neg
-   local.get $18
+   local.get $16
    f64.load offset=8
    f64.neg
-   local.get $18
+   local.get $16
    f64.load offset=16
    f64.neg
    call $assembly/types/Vec3/Vec3#constructor
@@ -5904,8 +5907,8 @@
    local.set $11
   end
   local.get $5
-  local.set $16
-  local.get $16
+  local.set $18
+  local.get $18
   f64.load offset=24
   f64.const 0
   f64.gt
@@ -5982,7 +5985,7 @@
    local.set $13
    global.get $~lib/memory/__stack_pointer
    local.get $17
-   local.set $18
+   local.set $16
    f64.const 2
    local.get $2
    local.set $8
@@ -6008,35 +6011,35 @@
    f64.mul
    local.set $21
    i32.const 0
-   local.get $18
+   local.get $16
    f64.load
    local.get $21
    f64.mul
-   local.get $18
+   local.get $16
    f64.load offset=8
    local.get $21
    f64.mul
-   local.get $18
+   local.get $16
    f64.load offset=16
    local.get $21
    f64.mul
    call $assembly/types/Vec3/Vec3#constructor
-   local.tee $16
+   local.tee $18
    i32.store offset=20
    i32.const 0
    local.get $13
    f64.load
-   local.get $16
+   local.get $18
    f64.load
    f64.sub
    local.get $13
    f64.load offset=8
-   local.get $16
+   local.get $18
    f64.load offset=8
    f64.sub
    local.get $13
    f64.load offset=16
-   local.get $16
+   local.get $18
    f64.load offset=16
    f64.sub
    call $assembly/types/Vec3/Vec3#constructor
@@ -6046,49 +6049,52 @@
    local.set $15
    local.get $15
    f64.load
-   local.get $15
-   f64.load
-   f64.mul
-   local.get $15
-   f64.load offset=8
-   local.get $15
-   f64.load offset=8
-   f64.mul
-   f64.add
-   local.get $15
-   f64.load offset=16
-   local.get $15
-   f64.load offset=16
-   f64.mul
-   f64.add
    local.set $21
+   local.get $15
+   f64.load offset=8
+   local.set $19
+   local.get $15
+   f64.load offset=16
+   local.set $24
    local.get $21
+   local.get $21
+   f64.mul
+   local.get $19
+   local.get $19
+   f64.mul
+   f64.add
+   local.get $24
+   local.get $24
+   f64.mul
+   f64.add
+   local.set $24
+   local.get $24
    f64.const 0
    f64.gt
    if
     f64.const 1
-    local.get $21
-    local.set $24
     local.get $24
+    local.set $21
+    local.get $21
     f64.sqrt
     f64.div
-    local.set $24
+    local.set $21
     local.get $14
     local.get $14
     f64.load
-    local.get $24
+    local.get $21
     f64.mul
     call $assembly/types/Vec3/Vec3#set:x
     local.get $14
     local.get $14
     f64.load offset=8
-    local.get $24
+    local.get $21
     f64.mul
     call $assembly/types/Vec3/Vec3#set:y
     local.get $14
     local.get $14
     f64.load offset=16
-    local.get $24
+    local.get $21
     f64.mul
     call $assembly/types/Vec3/Vec3#set:z
    end
@@ -6098,7 +6104,7 @@
    global.get $~lib/memory/__stack_pointer
    local.get $0
    local.get $12
-   local.set $18
+   local.set $16
    global.get $~lib/memory/__stack_pointer
    local.get $17
    local.set $10
@@ -6121,33 +6127,33 @@
    local.tee $8
    i32.store offset=36
    i32.const 0
-   local.get $18
+   local.get $16
    f64.load
    local.get $8
    f64.load
    f64.add
-   local.get $18
+   local.get $16
    f64.load offset=8
    local.get $8
    f64.load offset=8
    f64.add
-   local.get $18
+   local.get $16
    f64.load offset=16
    local.get $8
    f64.load offset=16
    f64.add
    call $assembly/types/Vec3/Vec3#constructor
-   local.set $38
+   local.set $39
    global.get $~lib/memory/__stack_pointer
-   local.get $38
+   local.get $39
    i32.store offset=32
-   local.get $38
+   local.get $39
    local.get $14
    local.get $3
    i32.const 1
    i32.add
    call $assembly/RayTracer/RayTracer#trace
-   local.tee $18
+   local.tee $16
    i32.store offset=40
    global.get $~lib/memory/__stack_pointer
    i32.const 0
@@ -6158,8 +6164,8 @@
    local.tee $8
    i32.store offset=36
    local.get $5
-   local.set $16
-   local.get $16
+   local.set $18
+   local.get $18
    f64.load offset=24
    i64.reinterpret_f64
    i64.const 1
@@ -6200,19 +6206,19 @@
     f64.mul
     f64.add
     f64.neg
-    local.set $21
-    f64.const 1
-    local.get $19
-    local.get $19
-    f64.mul
-    f64.const 1
-    local.get $21
-    local.get $21
-    f64.mul
-    f64.sub
-    f64.mul
-    f64.sub
     local.set $24
+    f64.const 1
+    local.get $19
+    local.get $19
+    f64.mul
+    f64.const 1
+    local.get $24
+    local.get $24
+    f64.mul
+    f64.sub
+    f64.mul
+    f64.sub
+    local.set $21
     global.get $~lib/memory/__stack_pointer
     global.get $~lib/memory/__stack_pointer
     global.get $~lib/memory/__stack_pointer
@@ -6238,26 +6244,26 @@
     i32.store offset=44
     global.get $~lib/memory/__stack_pointer
     local.get $17
-    local.set $16
+    local.set $18
     local.get $19
-    local.get $21
-    f64.mul
     local.get $24
+    f64.mul
+    local.get $21
     local.set $25
     local.get $25
     f64.sqrt
     f64.sub
     local.set $25
     i32.const 0
-    local.get $16
+    local.get $18
     f64.load
     local.get $25
     f64.mul
-    local.get $16
+    local.get $18
     f64.load offset=8
     local.get $25
     f64.mul
-    local.get $16
+    local.get $18
     f64.load offset=16
     local.get $25
     f64.mul
@@ -6284,52 +6290,55 @@
     local.tee $10
     i32.store offset=52
     local.get $10
-    local.set $16
-    local.get $16
+    local.set $18
+    local.get $18
     f64.load
-    local.get $16
-    f64.load
-    f64.mul
-    local.get $16
-    f64.load offset=8
-    local.get $16
-    f64.load offset=8
-    f64.mul
-    f64.add
-    local.get $16
-    f64.load offset=16
-    local.get $16
-    f64.load offset=16
-    f64.mul
-    f64.add
     local.set $25
+    local.get $18
+    f64.load offset=8
+    local.set $26
+    local.get $18
+    f64.load offset=16
+    local.set $27
     local.get $25
+    local.get $25
+    f64.mul
+    local.get $26
+    local.get $26
+    f64.mul
+    f64.add
+    local.get $27
+    local.get $27
+    f64.mul
+    f64.add
+    local.set $27
+    local.get $27
     f64.const 0
     f64.gt
     if
      f64.const 1
+     local.get $27
+     local.set $25
      local.get $25
-     local.set $26
-     local.get $26
      f64.sqrt
      f64.div
-     local.set $26
+     local.set $25
      local.get $10
      local.get $10
      f64.load
-     local.get $26
+     local.get $25
      f64.mul
      call $assembly/types/Vec3/Vec3#set:x
      local.get $10
      local.get $10
      f64.load offset=8
-     local.get $26
+     local.get $25
      f64.mul
      call $assembly/types/Vec3/Vec3#set:y
      local.get $10
      local.get $10
      f64.load offset=16
-     local.get $26
+     local.get $25
      f64.mul
      call $assembly/types/Vec3/Vec3#set:z
     end
@@ -6339,7 +6348,7 @@
     global.get $~lib/memory/__stack_pointer
     local.get $0
     local.get $12
-    local.set $16
+    local.set $18
     global.get $~lib/memory/__stack_pointer
     local.get $17
     local.set $13
@@ -6362,27 +6371,27 @@
     local.tee $15
     i32.store offset=44
     i32.const 0
-    local.get $16
+    local.get $18
     f64.load
     local.get $15
     f64.load
     f64.sub
-    local.get $16
+    local.get $18
     f64.load offset=8
     local.get $15
     f64.load offset=8
     f64.sub
-    local.get $16
+    local.get $18
     f64.load offset=16
     local.get $15
     f64.load offset=16
     f64.sub
     call $assembly/types/Vec3/Vec3#constructor
-    local.set $38
+    local.set $39
     global.get $~lib/memory/__stack_pointer
-    local.get $38
+    local.get $39
     i32.store offset=32
-    local.get $38
+    local.get $39
     local.get $10
     local.get $3
     i32.const 1
@@ -6394,7 +6403,7 @@
    global.get $~lib/memory/__stack_pointer
    global.get $~lib/memory/__stack_pointer
    global.get $~lib/memory/__stack_pointer
-   local.get $18
+   local.get $16
    local.set $13
    local.get $20
    local.set $25
@@ -6416,7 +6425,7 @@
    i32.store offset=48
    global.get $~lib/memory/__stack_pointer
    local.get $8
-   local.set $16
+   local.set $18
    f64.const 1
    local.get $20
    f64.sub
@@ -6425,19 +6434,19 @@
    local.get $15
    f64.load offset=24
    f64.mul
-   local.set $26
+   local.set $27
    i32.const 0
-   local.get $16
+   local.get $18
    f64.load
-   local.get $26
+   local.get $27
    f64.mul
-   local.get $16
+   local.get $18
    f64.load offset=8
-   local.get $26
+   local.get $27
    f64.mul
-   local.get $16
+   local.get $18
    f64.load offset=16
-   local.get $26
+   local.get $27
    f64.mul
    call $assembly/types/Vec3/Vec3#constructor
    local.tee $10
@@ -6466,22 +6475,22 @@
    local.set $15
    local.get $15
    i32.load offset=16
-   local.tee $16
+   local.tee $18
    i32.store offset=20
    i32.const 0
    local.get $10
    f64.load
-   local.get $16
+   local.get $18
    f64.load
    f64.mul
    local.get $10
    f64.load offset=8
-   local.get $16
+   local.get $18
    f64.load offset=8
    f64.mul
    local.get $10
    f64.load offset=16
-   local.get $16
+   local.get $18
    f64.load offset=16
    f64.mul
    call $assembly/types/Vec3/Vec3#constructor
@@ -6494,12 +6503,12 @@
    local.tee $8
    i32.store offset=36
    i32.const 0
-   local.set $18
+   local.set $16
    local.get $8
    call $~lib/array/Array<assembly/types/Sphere/Sphere>#get:length
    local.set $14
    loop $for-loop|1
-    local.get $18
+    local.get $16
     local.get $14
     i32.lt_s
     local.set $10
@@ -6507,12 +6516,12 @@
     if
      global.get $~lib/memory/__stack_pointer
      local.get $8
-     local.get $18
+     local.get $16
      call $~lib/array/Array<assembly/types/Sphere/Sphere>#__uget
-     local.tee $16
+     local.tee $18
      i32.store offset=20
      global.get $~lib/memory/__stack_pointer
-     local.get $16
+     local.get $18
      local.set $13
      local.get $13
      i32.load offset=20
@@ -6534,277 +6543,281 @@
       global.get $~lib/memory/__stack_pointer
       global.get $~lib/memory/__stack_pointer
       global.get $~lib/memory/__stack_pointer
-      local.get $16
-      local.set $27
-      local.get $27
+      local.get $18
+      local.set $28
+      local.get $28
       i32.load
-      local.tee $28
+      local.tee $29
       i32.store offset=56
       local.get $12
-      local.set $27
+      local.set $28
       i32.const 0
+      local.get $29
+      f64.load
       local.get $28
       f64.load
-      local.get $27
-      f64.load
       f64.sub
+      local.get $29
+      f64.load offset=8
       local.get $28
       f64.load offset=8
-      local.get $27
-      f64.load offset=8
       f64.sub
-      local.get $28
+      local.get $29
       f64.load offset=16
-      local.get $27
+      local.get $28
       f64.load offset=16
       f64.sub
       call $assembly/types/Vec3/Vec3#constructor
-      local.tee $27
+      local.tee $28
       i32.store offset=60
-      local.get $27
-      local.set $28
       local.get $28
+      local.set $29
+      local.get $29
       f64.load
-      local.get $28
-      f64.load
-      f64.mul
-      local.get $28
-      f64.load offset=8
-      local.get $28
-      f64.load offset=8
-      f64.mul
-      f64.add
-      local.get $28
-      f64.load offset=16
-      local.get $28
-      f64.load offset=16
-      f64.mul
-      f64.add
       local.set $20
+      local.get $29
+      f64.load offset=8
+      local.set $23
+      local.get $29
+      f64.load offset=16
+      local.set $22
       local.get $20
+      local.get $20
+      f64.mul
+      local.get $23
+      local.get $23
+      f64.mul
+      f64.add
+      local.get $22
+      local.get $22
+      f64.mul
+      f64.add
+      local.set $22
+      local.get $22
       f64.const 0
       f64.gt
       if
        f64.const 1
-       local.get $20
-       local.set $19
-       local.get $19
+       local.get $22
+       local.set $26
+       local.get $26
        f64.sqrt
        f64.div
-       local.set $19
-       local.get $27
-       local.get $27
+       local.set $26
+       local.get $28
+       local.get $28
        f64.load
-       local.get $19
+       local.get $26
        f64.mul
        call $assembly/types/Vec3/Vec3#set:x
-       local.get $27
-       local.get $27
+       local.get $28
+       local.get $28
        f64.load offset=8
-       local.get $19
+       local.get $26
        f64.mul
        call $assembly/types/Vec3/Vec3#set:y
-       local.get $27
-       local.get $27
+       local.get $28
+       local.get $28
        f64.load offset=16
-       local.get $19
+       local.get $26
        f64.mul
        call $assembly/types/Vec3/Vec3#set:z
       end
-      local.get $27
-      local.tee $27
+      local.get $28
+      local.tee $28
       i32.store offset=60
       i32.const 0
-      local.set $28
+      local.set $29
       block $for-break2
        loop $for-loop|2
-        local.get $28
+        local.get $29
         local.get $14
         i32.lt_s
-        local.set $29
-        local.get $29
+        local.set $30
+        local.get $30
         if
-         local.get $18
-         local.get $28
+         local.get $16
+         local.get $29
          i32.ne
          if
           block $assembly/types/Sphere/Sphere#intersect|inlined.1 (result i32)
            global.get $~lib/memory/__stack_pointer
            local.get $8
-           local.get $28
+           local.get $29
            call $~lib/array/Array<assembly/types/Sphere/Sphere>#__uget
-           local.tee $32
+           local.tee $33
            i32.store offset=64
            global.get $~lib/memory/__stack_pointer
            local.get $12
-           local.set $31
+           local.set $32
            global.get $~lib/memory/__stack_pointer
            local.get $17
-           local.set $30
+           local.set $31
            global.get $assembly/RayTracer/BIAS
-           local.set $21
-           i32.const 0
-           local.get $30
-           f64.load
-           local.get $21
-           f64.mul
-           local.get $30
-           f64.load offset=8
-           local.get $21
-           f64.mul
-           local.get $30
-           f64.load offset=16
-           local.get $21
-           f64.mul
-           call $assembly/types/Vec3/Vec3#constructor
-           local.tee $30
-           i32.store offset=68
+           local.set $19
            i32.const 0
            local.get $31
            f64.load
-           local.get $30
-           f64.load
-           f64.add
+           local.get $19
+           f64.mul
            local.get $31
            f64.load offset=8
-           local.get $30
-           f64.load offset=8
-           f64.add
+           local.get $19
+           f64.mul
            local.get $31
            f64.load offset=16
-           local.get $30
-           f64.load offset=16
-           f64.add
+           local.get $19
+           f64.mul
            call $assembly/types/Vec3/Vec3#constructor
            local.tee $31
-           i32.store offset=72
-           local.get $27
-           local.set $30
+           i32.store offset=68
            i32.const 0
-           local.set $33
-           global.get $~lib/memory/__stack_pointer
-           global.get $~lib/memory/__stack_pointer
            local.get $32
-           i32.load
-           local.tee $35
-           i32.store offset=76
+           f64.load
            local.get $31
-           local.set $34
-           i32.const 0
-           local.get $35
            f64.load
-           local.get $34
-           f64.load
-           f64.sub
-           local.get $35
+           f64.add
+           local.get $32
            f64.load offset=8
-           local.get $34
+           local.get $31
            f64.load offset=8
-           f64.sub
-           local.get $35
+           f64.add
+           local.get $32
            f64.load offset=16
-           local.get $34
+           local.get $31
+           f64.load offset=16
+           f64.add
+           call $assembly/types/Vec3/Vec3#constructor
+           local.tee $32
+           i32.store offset=72
+           local.get $28
+           local.set $31
+           i32.const 0
+           local.set $34
+           global.get $~lib/memory/__stack_pointer
+           global.get $~lib/memory/__stack_pointer
+           local.get $33
+           i32.load
+           local.tee $36
+           i32.store offset=76
+           local.get $32
+           local.set $35
+           i32.const 0
+           local.get $36
+           f64.load
+           local.get $35
+           f64.load
+           f64.sub
+           local.get $36
+           f64.load offset=8
+           local.get $35
+           f64.load offset=8
+           f64.sub
+           local.get $36
+           f64.load offset=16
+           local.get $35
            f64.load offset=16
            f64.sub
            call $assembly/types/Vec3/Vec3#constructor
-           local.tee $35
+           local.tee $36
            i32.store offset=76
+           local.get $36
+           local.set $37
+           local.get $31
+           local.set $35
+           local.get $37
+           f64.load
            local.get $35
-           local.set $36
-           local.get $30
-           local.set $34
-           local.get $36
-           f64.load
-           local.get $34
            f64.load
            f64.mul
-           local.get $36
+           local.get $37
            f64.load offset=8
-           local.get $34
+           local.get $35
            f64.load offset=8
            f64.mul
            f64.add
-           local.get $36
+           local.get $37
            f64.load offset=16
-           local.get $34
+           local.get $35
            f64.load offset=16
            f64.mul
            f64.add
-           local.set $21
-           local.get $21
+           local.set $19
+           local.get $19
            f64.const 0
            f64.lt
            if
             i32.const 0
             br $assembly/types/Sphere/Sphere#intersect|inlined.1
            end
-           local.get $35
-           local.set $36
-           local.get $35
-           local.set $34
            local.get $36
+           local.set $35
+           local.get $35
            f64.load
-           local.get $34
-           f64.load
+           local.set $22
+           local.get $35
+           f64.load offset=8
+           local.set $26
+           local.get $35
+           f64.load offset=16
+           local.set $23
+           local.get $22
+           local.get $22
            f64.mul
-           local.get $36
-           f64.load offset=8
-           local.get $34
-           f64.load offset=8
+           local.get $26
+           local.get $26
            f64.mul
            f64.add
-           local.get $36
-           f64.load offset=16
-           local.get $34
-           f64.load offset=16
+           local.get $23
+           local.get $23
            f64.mul
            f64.add
-           local.get $21
-           local.get $21
+           local.get $19
+           local.get $19
            f64.mul
            f64.sub
-           local.set $20
-           local.get $32
-           local.set $34
-           local.get $34
+           local.set $23
+           local.get $33
+           local.set $37
+           local.get $37
            f64.load offset=8
-           local.set $19
-           local.get $19
-           local.get $19
+           local.set $26
+           local.get $26
+           local.get $26
            f64.mul
-           local.set $19
-           local.get $20
-           local.get $19
+           local.set $26
+           local.get $23
+           local.get $26
            f64.gt
            if
             i32.const 0
             br $assembly/types/Sphere/Sphere#intersect|inlined.1
            end
-           local.get $33
+           local.get $34
            if
-            local.get $19
-            local.get $20
+            local.get $26
+            local.get $23
             f64.sub
             local.set $24
             local.get $24
             f64.sqrt
             local.set $24
-            local.get $21
+            local.get $19
             local.get $24
             f64.sub
-            local.set $23
-            local.get $21
+            local.set $22
+            local.get $19
             local.get $24
             f64.add
-            local.set $22
-            local.get $33
-            local.get $23
+            local.set $20
+            local.get $34
+            local.get $22
             f64.const 0
             f64.lt
             if (result f64)
-             local.get $22
+             local.get $20
             else
-             local.get $23
+             local.get $22
             end
             call $assembly/types/InstersectParams/IntersectParams#set:t
            end
@@ -6812,194 +6825,194 @@
           end
           if
            local.get $15
-           local.set $36
+           local.set $35
            f64.const 0
-           local.set $24
-           f64.const 0
-           local.set $26
+           local.set $27
            f64.const 0
            local.set $25
-           local.get $36
-           local.get $24
+           f64.const 0
+           local.set $21
+           local.get $35
+           local.get $27
            call $assembly/types/Vec3/Vec3#set:x
-           local.get $36
-           local.get $26
-           call $assembly/types/Vec3/Vec3#set:y
-           local.get $36
+           local.get $35
            local.get $25
+           call $assembly/types/Vec3/Vec3#set:y
+           local.get $35
+           local.get $21
            call $assembly/types/Vec3/Vec3#set:z
-           local.get $36
+           local.get $35
            drop
            br $for-break2
           end
          end
-         local.get $28
+         local.get $29
          i32.const 1
          i32.add
-         local.set $28
+         local.set $29
          br $for-loop|2
         end
        end
       end
       global.get $~lib/memory/__stack_pointer
       local.get $9
-      local.set $37
+      local.set $38
       global.get $~lib/memory/__stack_pointer
       global.get $~lib/memory/__stack_pointer
       global.get $~lib/memory/__stack_pointer
       global.get $~lib/memory/__stack_pointer
       local.get $5
-      local.set $34
-      local.get $34
+      local.set $37
+      local.get $37
       i32.load offset=16
-      local.tee $31
+      local.tee $32
       i32.store offset=72
       local.get $15
-      local.set $30
+      local.set $31
       i32.const 0
+      local.get $32
+      f64.load
       local.get $31
       f64.load
-      local.get $30
-      f64.load
       f64.mul
+      local.get $32
+      f64.load offset=8
       local.get $31
       f64.load offset=8
-      local.get $30
-      f64.load offset=8
       f64.mul
-      local.get $31
+      local.get $32
       f64.load offset=16
-      local.get $30
+      local.get $31
       f64.load offset=16
       f64.mul
       call $assembly/types/Vec3/Vec3#constructor
-      local.tee $35
+      local.tee $36
       i32.store offset=76
       f64.const 0
       local.set $22
       local.get $17
+      local.set $34
+      local.get $28
       local.set $33
-      local.get $27
-      local.set $32
-      local.get $33
+      local.get $34
       f64.load
-      local.get $32
+      local.get $33
       f64.load
       f64.mul
-      local.get $33
+      local.get $34
       f64.load offset=8
-      local.get $32
+      local.get $33
       f64.load offset=8
       f64.mul
       f64.add
-      local.get $33
+      local.get $34
       f64.load offset=16
-      local.get $32
+      local.get $33
       f64.load offset=16
       f64.mul
       f64.add
-      local.set $23
+      local.set $24
       local.get $22
-      local.get $23
+      local.get $24
       f64.max
-      local.set $21
+      local.set $20
       i32.const 0
+      local.get $36
+      f64.load
+      local.get $20
+      f64.mul
+      local.get $36
+      f64.load offset=8
+      local.get $20
+      f64.mul
+      local.get $36
+      f64.load offset=16
+      local.get $20
+      f64.mul
+      call $assembly/types/Vec3/Vec3#constructor
+      local.tee $30
+      i32.store offset=80
+      local.get $13
+      local.set $35
+      i32.const 0
+      local.get $30
+      f64.load
       local.get $35
       f64.load
-      local.get $21
       f64.mul
+      local.get $30
+      f64.load offset=8
       local.get $35
       f64.load offset=8
-      local.get $21
       f64.mul
+      local.get $30
+      f64.load offset=16
       local.get $35
       f64.load offset=16
-      local.get $21
       f64.mul
       call $assembly/types/Vec3/Vec3#constructor
       local.tee $29
-      i32.store offset=80
-      local.get $13
-      local.set $36
-      i32.const 0
-      local.get $29
-      f64.load
-      local.get $36
-      f64.load
-      f64.mul
-      local.get $29
-      f64.load offset=8
-      local.get $36
-      f64.load offset=8
-      f64.mul
-      local.get $29
-      f64.load offset=16
-      local.get $36
-      f64.load offset=16
-      f64.mul
-      call $assembly/types/Vec3/Vec3#constructor
-      local.tee $28
       i32.store offset=56
       i32.const 0
-      local.get $37
+      local.get $38
       f64.load
-      local.get $28
+      local.get $29
       f64.load
       f64.add
-      local.get $37
+      local.get $38
       f64.load offset=8
-      local.get $28
+      local.get $29
       f64.load offset=8
       f64.add
-      local.get $37
+      local.get $38
       f64.load offset=16
-      local.get $28
+      local.get $29
       f64.load offset=16
       f64.add
       call $assembly/types/Vec3/Vec3#constructor
       local.tee $9
       i32.store offset=16
      end
-     local.get $18
+     local.get $16
      i32.const 1
      i32.add
-     local.set $18
+     local.set $16
      br $for-loop|1
     end
    end
   end
   local.get $9
-  local.set $31
+  local.set $32
   global.get $~lib/memory/__stack_pointer
   local.get $5
-  local.set $34
-  local.get $34
+  local.set $37
+  local.get $37
   i32.load offset=20
-  local.tee $30
+  local.tee $31
   i32.store offset=68
   i32.const 0
+  local.get $32
+  f64.load
   local.get $31
   f64.load
-  local.get $30
-  f64.load
   f64.add
+  local.get $32
+  f64.load offset=8
   local.get $31
   f64.load offset=8
-  local.get $30
-  f64.load offset=8
   f64.add
-  local.get $31
+  local.get $32
   f64.load offset=16
-  local.get $30
+  local.get $31
   f64.load offset=16
   f64.add
   call $assembly/types/Vec3/Vec3#constructor
-  local.set $38
+  local.set $39
   global.get $~lib/memory/__stack_pointer
   i32.const 84
   i32.add
   global.set $~lib/memory/__stack_pointer
-  local.get $38
+  local.get $39
  )
  (func $assembly/index/scene (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (param $4 i32) (param $5 i32) (result i32)
   (local $6 i32)
@@ -7793,61 +7806,5 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $1
- )
- (func $~lib/array/Array<assembly/types/Sphere/Sphere>#__get (param $0 i32) (param $1 i32) (result i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $1
-  local.get $0
-  i32.load offset=12
-  i32.ge_u
-  if
-   i32.const 416
-   i32.const 768
-   i32.const 99
-   i32.const 42
-   call $~lib/builtins/abort
-   unreachable
-  end
-  global.get $~lib/memory/__stack_pointer
-  local.get $0
-  i32.load offset=4
-  local.get $1
-  i32.const 2
-  i32.shl
-  i32.add
-  i32.load
-  local.tee $2
-  i32.store
-  i32.const 1
-  drop
-  i32.const 0
-  i32.eqz
-  drop
-  local.get $2
-  i32.eqz
-  if
-   i32.const 816
-   i32.const 768
-   i32.const 103
-   i32.const 40
-   call $~lib/builtins/abort
-   unreachable
-  end
-  local.get $2
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
-  local.get $3
  )
 )

@@ -34,7 +34,7 @@ export class Sphere {
     const l = this.center.opMinus(rayorig);
     const tca = l.dot(raydir);
     if (tca < 0) return false;
-    const d2 = l.dot(l) - tca * tca;
+    const d2 = l.sqLength() - tca * tca;
     const r2 = this.sqRadius;
     if (d2 > r2) return false;
     if (params) {

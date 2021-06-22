@@ -8,7 +8,8 @@ export class Vec3 {
     public z: f64 = 0
   ) {}
   @inline sqLength(): f64 {
-    return this.x * this.x + this.y * this.y + this.z * this.z;
+    const x = this.x, y = this.y, z = this.z;
+    return x * x + y * y + z * z;
   }
   @inline length(): f64 {
     return Math.sqrt(this.sqLength());
