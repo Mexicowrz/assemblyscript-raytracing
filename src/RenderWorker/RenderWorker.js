@@ -1,5 +1,5 @@
 const WORKER_SOURCE = './worker/worker.js';
-const PART_SIZE = 100;
+const PART_SIZE = 128;
 
 export class RenderWorker {
   constructor() {

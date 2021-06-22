@@ -1,26 +1,28 @@
 import { Vec3 } from "./Vec3";
 
 export class Matrix44 {
-  x: f64[];
-  constructor() {
-    this.x = [1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1];
-  }
-  public multVecMatrix(src: Vec3): Vec3 {
-    let a: f64, b: f64, c: f64, w: f64;
-    a = src.x * this.x[0 * 4 + 0] + src.y * this.x[0 * 4 + 1] + src.z * this.x[0 * 4 + 2] + this.x[0 * 4 + 3];
-    b = src.x * this.x[1 * 4 + 0] + src.y * this.x[1 * 4 + 1] + src.z * this.x[1 * 4 + 2] + this.x[1 * 4 + 3];
-    c = src.x * this.x[2 * 4 + 0] + src.y * this.x[2 * 4 + 1] + src.z * this.x[2 * 4 + 2] + this.x[2 * 4 + 3];
-    w = src.x * this.x[3 * 4 + 0] + src.y * this.x[3 * 4 + 1] + src.z * this.x[3 * 4 + 2] + this.x[3 * 4 + 3];
+  m00: f64 = 1; m01: f64 = 0; m02: f64 = 0; m03: f64 = 0;
+  m10: f64 = 0; m11: f64 = 1; m12: f64 = 0; m13: f64 = 0;
+  m20: f64 = 0; m21: f64 = 0; m22: f64 = 1; m23: f64 = 0;
+  m30: f64 = 0; m31: f64 = 0; m32: f64 = 0; m33: f64 = 1;
+
+  @inline public multVecMatrix(vec: Vec3): Vec3 {
+    let x = vec.x, y = vec.y, z = vec.z;
+
+    let a = x * this.m00 + y * this.m01 + z * this.m02 + this.m03;
+    let b = x * this.m10 + y * this.m11 + z * this.m12 + this.m13;
+    let c = x * this.m20 + y * this.m21 + z * this.m22 + this.m23;
+    let w = x * this.m30 + y * this.m31 + z * this.m32 + this.m33;
 
     if (w === 0) return new Vec3();
     return new Vec3(a / w, b / w, c / w);
   }
 
-  public multDirMatrix(src: Vec3): Vec3 {
-    let a: f64, b: f64, c: f64;
-    a = src.x * this.x[0 * 4 + 0] + src.y * this.x[0 * 4 + 1] + src.z * this.x[0 * 4 + 2];
-    b = src.x * this.x[1 * 4 + 0] + src.y * this.x[1 * 4 + 1] + src.z * this.x[1 * 4 + 2];
-    c = src.x * this.x[2 * 4 + 0] + src.y * this.x[2 * 4 + 1] + src.z * this.x[2 * 4 + 2];
+  @inline public multDirMatrix(vec: Vec3): Vec3 {
+    let x = vec.x, y = vec.y, z = vec.z;
+    let a = x * this.m00 + y * this.m01 + z * this.m02;
+    let b = x * this.m10 + y * this.m11 + z * this.m12;
+    let c = x * this.m20 + y * this.m21 + z * this.m22;
     return new Vec3(a, b, c);
   }
 }
