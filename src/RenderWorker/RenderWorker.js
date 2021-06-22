@@ -1,10 +1,10 @@
 const WORKER_SOURCE = './worker/worker.js';
-const PART_SIZE = 100;
+const PART_SIZE = 128;
 
 export class RenderWorker {
   constructor() {
-    // выделить количество воркеров, в 2 раза меньше того кол-ва ядер, что имеется у пользователя
-    this.workers = Array(Math.ceil(navigator.hardwareConcurrency / 2));
+    // выделить количество воркеров на один меньше (главный поток)
+    this.workers = Array(navigator.hardwareConcurrency - 1);
     // инициализированы ли воркеры
     this.isInit = false;
     // выполняется ли работа

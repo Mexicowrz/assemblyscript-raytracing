@@ -12,10 +12,10 @@
       "textFile": "src/worker/optimized.wat",
       "sourceMap": true,
       "optimizeLevel": 3,
-      "shrinkLevel": 1,
-      "converge": false,
-      "noAssert": false,
-      "runtine":"incremental",
+      "shrinkLevel": 0,
+      "converge": true,
+      "noAssert": true,
+      "runtine": "incremental",
       "use": ["IS_WASI=0"],
       "exportRuntime": true
     }

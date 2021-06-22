@@ -33,9 +33,7 @@ const nextRender = () => {
 (async () => {
   if (!workerData) {
     // инициализаия воркеров рендера
-    const response = await fetch('./optimized.wasm');
-    const buffer = await response.arrayBuffer();
-    const wasm = await loader.instantiate(buffer, {});
+    const wasm = await loader.instantiate(fetch('./optimized.wasm'), {});
     workerData = {
       instance: wasm.instance.exports,
       exports: wasm.exports,
