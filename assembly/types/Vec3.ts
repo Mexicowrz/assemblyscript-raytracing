@@ -14,19 +14,19 @@ export class Vec3 {
   @inline length(): f64 {
     return Math.sqrt(this.sqLength());
   }
-  @inline set(x: f64, y: f64, z: f64): Vec3 {
+  @inline set(x: f64, y: f64, z: f64): this {
     this.x = x;
     this.y = y;
     this.z = z;
     return this;
   }
-  @inline setVec(vec: Vec3): Vec3 {
+  @inline setVec(vec: Vec3): this {
     this.x = vec.x;
     this.y = vec.y;
     this.z = vec.z;
     return this;
   }
-  @inline normalize(): Vec3 {
+  @inline normalize(): this {
     const len2 = this.sqLength();
     if (len2 > 0) {
       const invLen = 1.0 / Math.sqrt(len2);
@@ -54,6 +54,12 @@ export class Vec3 {
   }
   @inline opInv(): Vec3 {
     return new Vec3(-this.x, -this.y, -this.z);
+  }
+  @inline opInvSelf(): this {
+    this.x = -this.x;
+    this.y = -this.y;
+    this.z = -this.z;
+    return this;
   }
   toString(): string {
     return `${this.x};${this.y};${this.z}`;

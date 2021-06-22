@@ -51,20 +51,20 @@ export class RayTracer {
     let nhit = phit.opMinus(figure.getCenter()).normalize();
 
     let inside = false;
-    // let rayhitRadio = raydir.dot(nhit);
     if (raydir.dot(nhit) > 0) {
-      nhit = nhit.opInv();
+      nhit.opInvSelf();
       inside = true;
     }
     if (
       (figure.getTransparency() > 0 || figure.getReflection() > 0) &&
       depth < this.maxRayDepth
     ) {
-      const facingratio = -raydir.dot(nhit);
+      const rayhitRadio = raydir.dot(nhit);
+      const facingratio = -rayhitRadio;
       const revFacingratio = 1 - facingratio;
       const fresneleffect = mix(revFacingratio * revFacingratio * revFacingratio, 1, 0.1);
       const refldir = raydir
-        .opMinus(nhit.scalarMult(2 * raydir.dot(nhit)))
+        .opMinus(nhit.scalarMult(2 * rayhitRadio))
         .normalize();
       const reflection = this.trace(
         phit.opPlus(nhit.scalarMult(BIAS)),
@@ -76,7 +76,7 @@ export class RayTracer {
         const
           ior = 1.1,
           eta = inside ? ior : 1.0 / ior; // are we inside or outside the surface?
-        const cosi = -nhit.dot(raydir);
+        const cosi = facingratio;
         const k = 1.0 - eta * eta * (1.0 - cosi * cosi);
         const refrdir = raydir
           .scalarMult(eta)
@@ -143,21 +143,18 @@ export class RayTracer {
     block_width: i32,
     block_height: i32,
   ): void {
-    //    const bytes = width * height * 4;
-    const raydir = new Vec3();
     const
-      invWidth  = 1.0 / f64(width),
-      invHeight = 1.0 / f64(height),
-      aspectratio = f64(width) / f64(height),
       angle = this.angle,
+      invWidth  = 2.0 * angle / f64(width),
+      invHeight = 2.0 * angle / f64(height),
+      aspectratio = f64(width) / f64(height),
+      raydir = new Vec3(),
       cameraPos = new Vec3();
-
     for (let y = 0; y < block_height; ++y) {
-      let sride = y * block_width * 4;
+      const sride = y * block_width * 4;
+      const yy = angle - (y + block_y + 0.5) * invHeight;
       for (let x = 0; x < block_width; ++x) {
-        const xx = (2 * ((x + block_x + 0.5) * invWidth) - 1) * angle * aspectratio;
-        const yy = (1 - 2 * ((y + block_y + 0.5) * invHeight)) * angle;
-
+        const xx = ((x + block_x + 0.5) * invWidth - angle) * aspectratio;
         raydir.set(xx, yy, -1).normalize();
         const pixel = this.trace(cameraPos, raydir, 0);
         const px = pixel.x;
