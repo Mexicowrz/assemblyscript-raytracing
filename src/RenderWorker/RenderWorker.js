@@ -1,4 +1,4 @@
-const WORKER_SOURCE = './worker/worker.js';
+const WORKER_SOURCE = "./worker/worker.js";
 const PART_SIZE = 128;
 
 export class RenderWorker {
@@ -28,12 +28,12 @@ export class RenderWorker {
       // инициализаия воркеров
       for (let i = 0; i < this.workers.length; ++i) {
         const worker = {
-          worker: new Worker(WORKER_SOURCE, { type: 'module' }),
+          worker: new Worker(WORKER_SOURCE, { type: "module" }),
           isWorking: false,
           i,
         };
         this.workers[i] = worker;
-        worker.worker.onmessage = (e) => this.onWorkerMessage(worker, e);
+        worker.worker.onmessage = (e) => this.#onWorkerMessage(worker, e);
       }
       this.isInit = true;
     }
@@ -46,8 +46,8 @@ export class RenderWorker {
    * @param  {} height
    */
   async render(context, width, height, onProgress = null) {
-    if (!this.isInit) throw Error('Not initialized');
-    if (this.isWorking) throw Error('Working');
+    if (!this.isInit) throw Error("Not initialized");
+    if (this.isWorking) throw Error("Working");
     this.isWorking = true;
     this.context = context;
     this.width = width;
@@ -72,7 +72,7 @@ export class RenderWorker {
     this.all_parts = this.waiting_parts = this.parts.length;
     // запустить в работу все воркеры
     for (let i = 0; i < this.workers.length; ++i) {
-      this.nextPart();
+      this.#nextPart();
     }
   }
   /**
@@ -91,22 +91,22 @@ export class RenderWorker {
 
   /*************** закрытые методы **************/
 
-  onWorkerMessage(worker, e) {
+  #onWorkerMessage(worker, e) {
     worker.isWorking = false;
     --this.waiting_parts;
     if (this.onProgress) {
-      this.onProgress(100 * (1-this.waiting_parts / this.all_parts));
+      this.onProgress(100 * (1 - this.waiting_parts / this.all_parts));
     }
     const { data, buffer } = e.data;
     const im = new ImageData(buffer, data.block_width, data.block_height);
     this.context.putImageData(im, data.block_x, data.block_y);
-    this.nextPart();
+    this.#nextPart();
     if (this.waiting_parts <= 0) {
       this.isWorking = false;
     }
   }
 
-  nextPart() {
+  #nextPart() {
     if (this.parts.length === 0) return;
     const worker = this.workers.find((w) => !w.isWorking);
     if (!worker) return;
